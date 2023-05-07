@@ -1,0 +1,18 @@
+<h1>Mi nombre es: {{ this.nombre }}</h1>
+<h1>Tengo {{ this.edad }} Años</h1>
+<div *ngIf="this.edad >= 18">
+    <p [ngStyle]="{'background':'green','color':'#fff'}">Eres mayor de edad</p>
+</div>
+<div *ngIf="this.edad < 18">
+    <p [ngStyle]="{'background':'red','color':'#fff'}">Eres menor de edad</p>
+</div>
+<button (click)="aumentarEdad()">Aumnertar edad</button>
+<br>
+<br>
+<button (click)="decrementar()">Reducir edad</button>
+
+<h3>Recorrer datos de la api</h3>
+
+<div *ngFor="let user of listUser">
+    <p>{{ user.email }}</p>
+</div>
